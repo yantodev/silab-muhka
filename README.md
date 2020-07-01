@@ -1,2 +1,2 @@
-# silab-muhka
- Sistem Informasi Laboratorium Komputer SMK Muhammadiyah Karangmojo
+# silab
+ Sistem Informasi Laboratorium SMK Muh Karangmojo
