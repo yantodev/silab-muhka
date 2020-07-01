@@ -15,47 +15,75 @@
     <title><?= $title; ?></title>
 </head>
 
-<body style="background-repeat: space repeat; background-image:linear-gradient(rgba(0, 0, 255, 0.5), rgba(254, 241, 17, 0.5)), url('./assets/images/bg.png'); ">
+<body>
 
     <!-- Image and text -->
-    <div class="navbar navbar-light">
-        <a class="navbar-brand align-center" href="#">
+    <!-- <div class="navbar navbar-light justify-content-md-center">
+        <a class="navbar-brand" href="#">
             <img src="<?= base_url(); ?>assets/images/logo-depan.png" width="auto" height="100" class="d-inline-block align-top" loading="lazy">
         </a>
-    </div>
+    </div> -->
 
+    <div class="container mt-2">
+        <div class="row justify-content-md-center">
+            <div class="col-md-auto" style="width: 10rem; ">
+                <img src="<?= base_url(); ?>assets/images/logo (1).png" width="100" height="100" class="card-img-top">
+            </div>
+            <div class="col-md-auto">
+                <h2 style="text-align: center;">
+                    SISTEM INFORMASI LABORATORIUM<br />
+                    SMK MUHAMMADIYAH KARANGMOJO
+                </h2>
+                <h5 style="text-align: center;">
+                    Jl. Karangmojo - Ponjong KM 0,5 Karangmojo
+                </h5>
+            </div>
+            <div class="col-md-auto" style="width: 10rem; ">
+                <img src="<?= base_url(); ?>assets/images/logo (2).png" width="100" height="100" class="card-img-top">
+            </div>
+        </div>
+        <hr>
+    </div>
 
     <div class="container mt-5">
         <div class="row justify-content-md-center">
             <div class="col-md-auto">
-                <a href="<?= base_url('auth'); ?>" class="card" style="width: 15rem; background-color:azure">
-                    <img src="<?= base_url(); ?>assets/images/logo-labkom.png" width="200" height="200" class="card-img-top" alt="...">
+                <a href="<?= base_url('auth'); ?>" class="card" style="width: 10rem; background-color:azure">
+                    <img src="<?= base_url(); ?>assets/images/logo-labkom.png" width="10" height="110" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h4 style="text-align:center">LAB. KOMPUTER</h4>
+                        <p style="text-align:center">LAB. KOMPUTER</p>
                     </div>
                 </a>
             </div>
             <div class="col-md-auto">
-                <a href="<?= base_url('auth'); ?>" class="card" style="width: 15rem; background-color:azure">
-                    <img src="<?= base_url(); ?>assets/images/bg.png" width="auto" height="200" class="card-img-top" alt="...">
+                <a href="<?= base_url('auth'); ?>" class="card" style="width: 10rem; background-color:azure">
+                    <img src="<?= base_url(); ?>assets/images/logo (2).png" width="10" height="110" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h4 style="text-align:center">LAB. OTKP</h4>
+                        <p style="text-align:center">LAB. OTKP</p>
                     </div>
                 </a>
             </div>
             <div class="col-md-auto">
-                <a href="<?= base_url('auth'); ?>" class="card" style="width: 15rem; background-color:azure">
-                    <img src="<?= base_url(); ?>assets/images/bg.png" width="auto" height="200" class="card-img-top" alt="...">
+                <a href="<?= base_url('auth'); ?>" class="card" style="width: 10rem; background-color:azure">
+                    <img src="<?= base_url(); ?>assets/images/logo (2).png" width="10" height="110" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h4 style="text-align:center">LAB. AKL</h4>
+                        <p style="text-align:center">LAB. AKL</p>
                     </div>
                 </a>
             </div>
             <div class="col-md-auto">
-                <a href="<?= base_url('auth'); ?>" class="card" style="width: 15rem; background-color:azure">
-                    <img src="<?= base_url(); ?>assets/images/lab-tkro.png" width="200" height="200" class="card-img-top" alt="...">
+                <a href="<?= base_url('auth'); ?>" class="card" style="width: 10rem; background-color:azure">
+                    <img src="<?= base_url(); ?>assets/images/lab-tkro.png" width="10" height="110" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h4 style="text-align:center">LAB. TKRO</h4>
+                        <p style="text-align:center">LAB. TKRO</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-auto">
+                <a href="<?= base_url('auth'); ?>" class="card" style="width: 10rem; background-color:azure">
+                    <img src="<?= base_url(); ?>assets/images/lab-tkro.png" width="10" height="110" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p style="text-align:center">LAB. TBSM</p>
                     </div>
                 </a>
             </div>
