@@ -53,6 +53,8 @@ class Labkomputer extends CI_Controller
         $data['user'] = $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array();
         $data['data'] = $this->Admin_labkom->getAllDataKomputer();
         $data['ruang'] = ['R01-Lab. Komputer Barat', 'R02-Lab. Komputer Timur', 'R03-Lab. Bahasa', 'R04-Lab. Akuntansi'];
+        $data['alat'] = $this->db->get('jenisperangkat_labkom')->result_array();
+        $data['status'] = ['Aktif', 'Non Aktif'];
 
         $this->load->view('layout/header', $data);
         $this->load->view('layout/sidebar', $data);
@@ -65,6 +67,7 @@ class Labkomputer extends CI_Controller
         $data['title'] = 'Peminjam';
         $data['user'] = $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array();
         $data['data'] = $this->Admin_labkom->getAllDataPeminjam();
+        $data['status'] = ['Sementara', 'Permanen'];
 
         $this->load->view('layout/header', $data);
         $this->load->view('layout/sidebar', $data);

@@ -102,11 +102,21 @@
                     </div>
                     <div class="form-group">
                         <label>Jenis Alat</label>
-                        <input type="text" class="form-control" id="jenis" name="jenis">
+                        <select class="form-control" id="jenis" name="jenis">
+                            <option value="">---Pilih Alat---</option>
+                            <?php foreach ($alat as $m) : ?>
+                                <option value="<?= $m['nama_jenisperangkat']; ?>"><?= $m['nama_jenisperangkat']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Status Alat</label>
-                        <input type="text" class="form-control" id="status" name="status">
+                        <select name="status" id="status" class="form-control">
+                            <option value="">---Pilih Status---</option>
+                            <?php foreach ($status as $r) : ?>
+                                <option value="<?= $r; ?>"><?= $r; ?></option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
                     <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

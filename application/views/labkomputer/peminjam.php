@@ -10,6 +10,7 @@
                     <b><?= $this->session->flashdata('flash'); ?></b>
                 </div>
             <?php endif; ?>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modal-sm">Tambah Data</a>
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
@@ -45,4 +46,61 @@
         <!-- /.card-body -->
     </div>
     <!-- /.card -->
+</div>
+<!-- MODAL -->
+<div class="modal fade" id="modal-sm">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Tambah Data Komputer</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="<?= base_url('labkomputer/datakomputer'); ?>" method="post">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Tanggal Pinjam</label>
+                        <input type="date" class="form-control" id="tgl_pinjam" name="tgl_pinjam">
+                    </div>
+                    <div class="form-group">
+                        <label>Nama Peminjam</label>
+                        <input type="text" class="form-control" id="nama_pinjam" name="nama_pinjam">
+                    </div>
+                    <div class="form-group">
+                        <label>Nama Barang</label>
+                        <input type="text" class="form-control" id="nama_barang" name="nama_barang">
+                    </div>
+                    <div class="form-group">
+                        <label>No. Inventaris</label>
+                        <input type="text" class="form-control" id="no_inv" name="no_inv">
+                    </div>
+                    <div class="form-group">
+                        <label>Keperluan</label>
+                        <input type="text" class="form-control" id="keperluan" name="keperluan">
+                    </div>
+                    <div class="form-group">
+                        <label>Catatan</label>
+                        <input type="text" class="form-control" id="catatan_pinjam" name="catatan_pinjam">
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select name="room" id="room" class="form-control">
+                            <option value="">---Pilih Status---</option>
+                            <?php foreach ($status as $r) : ?>
+                                <option value="<?= $r; ?>"><?= $r; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+            </form>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 </div>

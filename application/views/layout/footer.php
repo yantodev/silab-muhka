@@ -1,3 +1,4 @@
+</div>
 <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
         <b>Developer by </b> <a href="https://www.facebook.com/exo.cahyanto">Eko Cahyanto</a>
