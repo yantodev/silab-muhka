@@ -1,4 +1,3 @@
-</div>
 <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
         <b>Developer by </b> <a href="https://www.facebook.com/exo.cahyanto">Eko Cahyanto</a>
@@ -26,6 +25,8 @@
 <script src="<?= base_url(); ?>assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?= base_url(); ?>assets/dist/js/adminlte.min.js"></script>
+<!-- Summernote -->
+<script src="<?= base_url(); ?>assets/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?= base_url(); ?>assets/dist/js/demo.js"></script>
 <!-- page script -->
@@ -53,6 +54,12 @@
         })
 
     });
+</script>
+<script>
+    $(function() {
+        // Summernote
+        $('.textarea').summernote()
+    })
 </script>
 <script>
     $(function() {

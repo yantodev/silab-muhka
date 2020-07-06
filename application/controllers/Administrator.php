@@ -155,4 +155,60 @@ class Administrator extends CI_Controller
         $this->load->view('administrator/akun-aktivasi', $data);
         $this->load->view('layout/footer');
     }
+
+    //proker
+    public function proker()
+    {
+        $data['title'] = 'Program Kerja';
+        $data['user'] = $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['proker'] = $this->Administrator_model->Proker();
+
+        $this->form_validation->set_rules('kegiatan', 'kegiatan', 'required');
+        $this->form_validation->set_rules('target', 'target', 'required');
+        $this->form_validation->set_rules('waktu', 'waktu', 'required');
+        if ($this->form_validation->run() == false) {
+            $this->load->view('layout/header', $data);
+            $this->load->view('layout/sidebar', $data);
+            $this->load->view('administrator/proker', $data);
+            $this->load->view('layout/footer');
+        } else {
+            $this->db->insert('proker_kepala_laboratorium', [
+                'kegiatan' => $this->input->post('kegiatan'),
+                'target' => $this->input->post('target'),
+                'waktu' => $this->input->post('waktu'),
+                'status' => 'Belum'
+            ]);
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Program Kerja Berhasil ditambah!!!</div>');
+            redirect('administrator/proker');
+        }
+    }
+    public function editProker($id)
+    {
+        $data['title'] = 'Edit Program Kerja';
+        $data['user'] = $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array();
+        // $data['proker'] = $this->Administrator_model->Proker();
+        $data['proker'] = $this->Administrator_model->getProkerById($id);
+        $data['status'] = ['Sudah', 'Belum'];
+
+        $this->form_validation->set_rules('kegiatan', 'kegiatan', 'required');
+        $this->form_validation->set_rules('target', 'target', 'required');
+        $this->form_validation->set_rules('waktu', 'waktu', 'required');
+        $this->form_validation->set_rules('status', 'status', 'required');
+        if ($this->form_validation->run() == false) {
+            $this->load->view('layout/header', $data);
+            $this->load->view('layout/sidebar', $data);
+            $this->load->view('administrator/edit-proker', $data);
+            $this->load->view('layout/footer');
+        } else {
+            $this->Administrator_model->editProker();
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Program Kerja Berhasil diupdate!!!</div>');
+            redirect('administrator/proker');
+        }
+    }
+    public function hapus($id)
+    {
+        $this->Administrator_model->hapusData($id);
+        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus!!!</div>');
+        redirect('administrator/proker');
+    }
 }
