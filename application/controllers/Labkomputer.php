@@ -52,6 +52,7 @@ class Labkomputer extends CI_Controller
         $data['title'] = 'Data Komputer';
         $data['user'] = $this->db->get_where('tbl_user', ['email' => $this->session->userdata('email')])->row_array();
         $data['data'] = $this->Admin_labkom->getAllDataKomputer();
+        $data['ruang'] = ['R01-Lab. Komputer Barat', 'R02-Lab. Komputer Timur', 'R03-Lab. Bahasa', 'R04-Lab. Akuntansi'];
 
         $this->load->view('layout/header', $data);
         $this->load->view('layout/sidebar', $data);
