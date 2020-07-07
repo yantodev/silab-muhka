@@ -48,27 +48,11 @@
     <div class="container mt-5">
         <div class="row justify-content-md-center">
             <div class="col-md-auto">
-                <a href="<?= base_url('auth'); ?>" class="card" style="width: 10rem; background-color:azure">
-                    <img src="<?= base_url(); ?>assets/images/logo-labkom.png" width="10" height="110" class="card-img-top" alt="...">
-                    <div class="card-body">
+                <a href="<?= base_url('auth'); ?>" class="card" style="width: 10rem;">
+                    <img src="<?= base_url(); ?>assets/images/logo-labkom.png" width="auto" height="180" class="card-img-top" alt="...">
+                    <!-- <div class="card-body">
                         <p style="text-align:center">LAB. KOMPUTER</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-auto">
-                <a href="<?= base_url('auth'); ?>" class="card" style="width: 10rem; background-color:azure">
-                    <img src="<?= base_url(); ?>assets/images/logo (2).png" width="10" height="110" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p style="text-align:center">LAB. OTKP</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-auto">
-                <a href="<?= base_url('auth'); ?>" class="card" style="width: 10rem; background-color:azure">
-                    <img src="<?= base_url(); ?>assets/images/logo (2).png" width="10" height="110" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p style="text-align:center">LAB. AKL</p>
-                    </div>
+                    </div> -->
                 </a>
             </div>
             <div class="col-md-auto">
@@ -80,11 +64,11 @@
                 </a>
             </div>
             <div class="col-md-auto">
-                <a href="<?= base_url('auth'); ?>" class="card" style="width: 10rem; background-color:azure">
-                    <img src="<?= base_url(); ?>assets/images/lab-tkro.png" width="10" height="110" class="card-img-top" alt="...">
-                    <div class="card-body">
+                <a href="<?= base_url('auth'); ?>" style="width: 10rem;">
+                    <img src="<?= base_url(); ?>assets/images/lab-tbsm.png" width="10" height="180" class="card-img-top" alt="...">
+                    <!-- <div class="card-body">
                         <p style="text-align:center">LAB. TBSM</p>
-                    </div>
+                    </div> -->
                 </a>
             </div>
         </div>
